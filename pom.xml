@@ -5,7 +5,7 @@
 
   <groupId>org.rulez.demokracia</groupId>
   <artifactId>PDEngine</artifactId>
-  <version>0.0.1-master.4a96649</version>
+  <version>0.0.1-feature_docker_populate_cache_133.1d62a5a</version>
   <packaging>war</packaging>
 
   <name>PDEngine</name>
@@ -20,6 +20,17 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.4.5</version>
+          <configuration>
+              <outputFormats>
+                  <outputFormat>XML</outputFormat>
+                  <outputFormat>HTML</outputFormat>
+              </outputFormats>
+          </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -156,6 +167,11 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <version>1.7.24</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.mockito</groupId>
+    	<artifactId>mockito-core</artifactId>
+    	<version>2.23.0</version>
     </dependency>
   </dependencies>
 </project>

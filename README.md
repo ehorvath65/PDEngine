@@ -19,15 +19,14 @@ http://adadocs.demokracia.rulez.org/adadocs/edemo/master/KDEA/index.html#701bb9c
 The design documentation is here:
 http://adadocs.demokracia.rulez.org/PDEngine/edemo/master/index.html
 
-hungarian REST API dcumentation (the above is the normative!):
-https://docs.google.com/document/d/1OfiW5jRzdRuli-4wmBedvsatGIfEgHGzq5Cm5cAzKzk/edit?usp=sharing
-
 # For developers
 
 !!! even the unit tests use hardware random generator (/dev/random). install the haveged package,
 otherwise tests will take ages!!!
 
 Quality metrics gathered by sonar: https://sonarqube.com/dashboard?id=org.rulez.demokracia:PDEngine
+
+- Coding rules are mandatory. They are here: https://adadocs.demokracia.rulez.org/zenta-tools/magwas/master/zenta-tools/codingrules.html
 
 - We are using git-flow. You issue pull requests to the develop branch.
 

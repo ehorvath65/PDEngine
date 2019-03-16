@@ -1,13 +1,13 @@
 package org.rulez.demokracia.pdengine;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.rulez.demokracia.pdengine.annotations.tested_behaviour;
 import org.rulez.demokracia.pdengine.annotations.tested_feature;
 import org.rulez.demokracia.pdengine.annotations.tested_operation;
+import org.rulez.demokracia.pdengine.testhelpers.VoteInvariantCheck;
+import org.rulez.demokracia.pdengine.testhelpers.VariantVote;
 
 @tested_feature("Manage votes")
 @tested_operation("create vote")
@@ -38,7 +38,7 @@ public class InvariantTest extends VoteInvariantCheck {
 
 	@Test
 	public void neededAssurances_is_invariant() {
-		List<String> badAssurances = new ArrayList<String>();
+		ArrayList<String> badAssurances = new ArrayList<String>();
 		badAssurances.add("bad");
 		vote.neededAssurances = badAssurances;
 		assertThrows(() -> checkInvariables());
@@ -47,7 +47,7 @@ public class InvariantTest extends VoteInvariantCheck {
 
 	@Test
 	public void countedAssurances_is_invariant() {
-		List<String> badAssurances = new ArrayList<String>();
+		ArrayList<String> badAssurances = new ArrayList<String>();
 		badAssurances.add("bad");
 		vote.countedAssurances = badAssurances;
 		assertThrows(() -> checkInvariables());

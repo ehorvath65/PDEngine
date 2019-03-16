@@ -1,20 +1,17 @@
-package org.rulez.demokracia.pdengine;
+package org.rulez.demokracia.pdengine.testhelpers;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.After;
 import org.rulez.demokracia.pdengine.dataobjects.VoteEntity;
-import org.rulez.demokracia.pdengine.testhelpers.ThrowableTester;
 
 public class VoteInvariantCheck extends ThrowableTester {
 
 	public VoteEntity savedVote;
 	public String savedVoteId;
 	public String savedAdminKey;
-	public List<String> savedNeededAssurances;
+	public ArrayList<String> savedNeededAssurances;
 	public ArrayList<String> savedCountedAssurances;
 	public boolean savedIsPrivate;
 	public long savedCreationTime;
